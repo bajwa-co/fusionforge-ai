@@ -76,10 +76,10 @@ const Services = () => {
           <article
             key={title}
             data-service
-            className="group rounded-lg border bg-card p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md hover-scale"
+            className="group rounded-xl border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md hover-scale"
           >
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-md gradient-primary text-primary-foreground shadow-[var(--shadow-elegant)]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full gradient-primary text-primary-foreground shadow-[var(--shadow-elegant)] ring-1 ring-border">
                 <Icon aria-hidden />
               </div>
               <h3 className="font-medium">{title}</h3>

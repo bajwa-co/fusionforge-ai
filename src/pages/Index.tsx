@@ -1,6 +1,7 @@
 import EcoNav from "@/components/site/EcoNav";
 import Hero from "@/components/site/Hero";
 import Services from "@/components/site/Services";
+import LogosStrip from "@/components/site/LogosStrip";
 import CaseStudies from "@/components/site/CaseStudies";
 import Timeline from "@/components/site/Timeline";
 import TeamCred from "@/components/site/TeamCred";
@@ -39,6 +40,7 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
+        <LogosStrip />
         <CaseStudies />
         <Timeline />
         <TeamCred />
