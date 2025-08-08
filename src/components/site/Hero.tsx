@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import gsap from "gsap";
+import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 
 const specialties = ["AI Automation", "Full‑Stack", "IoT Agents"];
 
@@ -20,6 +21,14 @@ const Hero = () => {
         duration: 0.8,
         stagger: 0.1,
         ease: "power2.out",
+      });
+      gsap.to("[data-float]", {
+        y: -6,
+        duration: 2,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut",
+        stagger: 0.2,
       });
     }, containerRef);
     return () => ctx.revert();
@@ -87,19 +96,41 @@ const Hero = () => {
                 document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
               }}
               aria-label="See our work"
+              className="group"
             >
-              See our work
+              <span className="inline-flex items-center gap-2">
+                See our work
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+              </span>
             </Button>
           </div>
         </div>
-        <figure aria-label="Hero illustration" className="relative">
-          <div className="rounded-2xl border bg-card/80 p-4 shadow-sm ring-1 ring-border backdrop-blur">
-            <img
-              src="/placeholder.svg"
-              alt="Studio workflow illustration"
-              loading="lazy"
-              className="mx-auto h-64 w-auto"
-            />
+        <figure aria-label="Hero illustration" className="relative grid place-items-center">
+          <div className="relative h-72 w-full max-w-md">
+            <div className="glass-card absolute inset-0 p-4 shadow-sm">
+              <img
+                src="/placeholder.svg"
+                alt="Studio workflow illustration"
+                loading="lazy"
+                className="mx-auto h-full w-auto"
+              />
+            </div>
+            <div data-float className="glass-card absolute -top-4 -left-4 w-36 rotate-[-4deg] p-3">
+              <p className="text-xs font-medium">RAG • Agents</p>
+              <p className="mt-1 text-[11px] text-muted-foreground">Eval + guardrails</p>
+            </div>
+            <div data-float className="glass-card absolute -bottom-6 -right-6 w-40 rotate-[5deg] p-3">
+              <p className="text-xs font-medium">Realtime</p>
+              <p className="mt-1 text-[11px] text-muted-foreground">Telemetry & dashboards</p>
+            </div>
+            <div data-float className="badge-soft absolute -top-8 right-10 flex items-center gap-2">
+              <Sparkles className="h-4 w-4" aria-hidden />
+              Ship faster
+            </div>
+            <div data-float className="badge-soft absolute -bottom-9 left-8 flex items-center gap-2">
+              <ShieldCheck className="h-4 w-4" aria-hidden />
+              Guardrails on
+            </div>
           </div>
           <div className="pointer-events-none absolute -top-4 -right-4 h-16 w-16 rounded-full gradient-primary opacity-40 blur-xl" />
           <div className="pointer-events-none absolute -bottom-6 -left-6 h-24 w-24 rounded-full gradient-primary opacity-30 blur-2xl" />
