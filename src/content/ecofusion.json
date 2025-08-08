@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "text": "AI automation, full‑stack apps, and IoT agents.",
+    "source": "synthesized: value proposition aligned to user brief"
+  },
+  "services": {
+    "LLM & NLP Systems": {
+      "bullets": [
+        "RAG pipelines with vector search",
+        "Fine-tuning and evaluation",
+        "Observability & guardrails"
+      ],
+      "source": "synthesized"
+    },
+    "Automation & Agents": {
+      "bullets": [
+        "Multi-tool agents and workflows",
+        "Browser/RPA + API orchestration",
+        "Eval harnesses & safety rails"
+      ],
+      "source": "synthesized"
+    },
+    "IoT & Robotics": {
+      "bullets": [
+        "DJI Tello and edge vision demos",
+        "Realtime telemetry dashboards",
+        "Cloud-to-edge control"
+      ],
+      "source": "synthesized"
+    },
+    "Full‑Stack Delivery": {
+      "bullets": [
+        "React/Vite frontends",
+        "Node/Python inference APIs",
+        "CI/CD & cloud deploy"
+      ],
+      "source": "synthesized"
+    }
+  },
+  "projects": [
+    {
+      "title": "Realtime Text Prediction Dashboard",
+      "summary": "Interactive web UI connected to a hosted transformer for streaming inference and metrics.",
+      "tags": ["Hugging Face", "LangChain", "React"],
+      "note": "Demo UI streams tokens and charts response latency.",
+      "source": "synthesized"
+    },
+    {
+      "title": "Tello Drone Face‑Tracking",
+      "summary": "Flask + React controller for a DJI Tello with OpenCV-based face tracking and telemetry.",
+      "tags": ["OpenCV", "Flask", "Tello API"],
+      "note": "Real-time control with autonomous tracking sequences.",
+      "source": "synthesized"
+    },
+    {
+      "title": "AI Customer Support Chatbot",
+      "summary": "Retrieval-augmented assistant answering FAQs using your docs with citations and safety rails.",
+      "tags": ["Retrieval", "LLM", "React"],
+      "note": "Deployed sandbox shows accurate answers with sources.",
+      "source": "synthesized"
+    }
+  ],
+  "team": {
+    "note": "Team & credibility compiled from repository work; concrete attributions pending direct repo access.",
+    "source": ["Abdullah007bajwa (pending)", "EagleWingsFYP (pending)", "HuBiCEM (pending)"]
+  }
+}
