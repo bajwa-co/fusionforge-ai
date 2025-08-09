@@ -1,4 +1,10 @@
 import { useState } from "react";
+import elderlyImg from "@/assets/proj-elderly-care.webp";
+import textDashImg from "@/assets/proj-text-dashboard.webp";
+import stockLstmImg from "@/assets/proj-stock-lstm.webp";
+import millionLlmImg from "@/assets/proj-million-llm.webp";
+import bertImg from "@/assets/proj-bert.webp";
+import valentinesImg from "@/assets/proj-valentines.webp";
 
 interface CaseStudy {
   title: string;
@@ -7,36 +13,70 @@ interface CaseStudy {
   note: string;
   image?: string;
   source: string;
+  href?: string;
 }
 
-// Copy synthesized due to missing repo access
+// Real content pulled from GitHub profile repos
 const items: CaseStudy[] = [
   {
-    title: "Realtime Text Prediction Dashboard",
+    title: "Elderly Care Companion",
     summary:
-      "Interactive web UI connected to a hosted transformer for streaming inference and metrics.",
-    tags: ["Hugging Face", "LangChain", "React"],
-    note: "Demo UI streams tokens and charts response latency.",
-    image: "/placeholder.svg",
-    source: "synthesized from typical LLM dashboard patterns",
+      "Flutter + Django app for medication schedules, appointments, AI companion, and emergency alerts.",
+    tags: ["Flutter", "Django", "Firestore", "TensorFlow"],
+    note: "From GitHub README — 2 stars.",
+    image: elderlyImg,
+    source: "GitHub",
+    href: "https://github.com/Abdullah007bajwa/Elderly_Care_Companion",
   },
   {
-    title: "Tello Drone Face‑Tracking",
+    title: "AI Text Prediction Dashboard",
     summary:
-      "Flask + React controller for a DJI Tello with OpenCV-based face tracking and telemetry.",
-    tags: ["OpenCV", "Flask", "Tello API"],
-    note: "Real-time control with autonomous tracking sequences.",
-    image: "/placeholder.svg",
-    source: "synthesized from common IoT drone demos",
+      "Flask app with Hugging Face model streaming predictions in a live dashboard.",
+    tags: ["Flask", "Hugging Face", "Realtime"],
+    note: "From GitHub README — live demo linked in repo.",
+    image: textDashImg,
+    source: "GitHub",
+    href: "https://github.com/Abdullah007bajwa/cuddly-fortnight",
   },
   {
-    title: "AI Customer Support Chatbot",
+    title: "Stock Pattern Prediction (LSTM + Attention)",
     summary:
-      "Retrieval-augmented assistant answering FAQs using your docs with citations and safety rails.",
-    tags: ["Retrieval", "LLM", "React"],
-    note: "Deployed sandbox shows accurate answers with sources.",
-    image: "/placeholder.svg",
-    source: "synthesized from full-stack chatbot apps",
+      "TensorFlow model forecasting next candle patterns with an accompanying Flask UI.",
+    tags: ["TensorFlow", "LSTM", "Attention", "Flask"],
+    note: "From GitHub README — 1 star.",
+    image: stockLstmImg,
+    source: "GitHub",
+    href: "https://github.com/Abdullah007bajwa/Advanced-Stock-Pattern-Prediction-using-LSTM-with-Attention-Mechanism-in-TensorFlow",
+  },
+  {
+    title: "Million‑Parameter LLM",
+    summary:
+      "Educational Python notebook building a small LLM from scratch with training curves.",
+    tags: ["Python", "Jupyter", "LLM"],
+    note: "From GitHub README.",
+    image: millionLlmImg,
+    source: "GitHub",
+    href: "https://github.com/Abdullah007bajwa/Million-Parameter-LLM",
+  },
+  {
+    title: "BERT (research fork)",
+    summary:
+      "TensorFlow code and pre‑trained models for BERT research (fork).",
+    tags: ["TensorFlow", "BERT", "NLP"],
+    note: "Fork of google‑research/bert.",
+    image: bertImg,
+    source: "GitHub",
+    href: "https://github.com/Abdullah007bajwa/bert",
+  },
+  {
+    title: "Valentine’s Day Experiment",
+    summary:
+      "Playful web app with animated interactions and persuasive UX.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    note: "From GitHub README.",
+    image: valentinesImg,
+    source: "GitHub",
+    href: "https://github.com/Abdullah007bajwa/Valentines-Day-Experiment",
   },
 ];
 
@@ -93,9 +133,20 @@ const CaseStudies = () => {
                 </div>
                 {/* Back */}
                 <div className="absolute inset-0 rotate-y-180 rounded-lg [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                  <div className="flex h-full flex-col items-center justify-center p-4 text-center">
+                  <div className="flex h/full flex/col items/center justify/center p/4 text/center">
                     <p className="text-sm text-muted-foreground">{cs.note}</p>
-                    <p className="mt-3 text-xs text-muted-foreground">Source: {cs.source}</p>
+                    <p className="mt-2 text-xs text-muted-foreground">Source: {cs.source}</p>
+                    {cs.href && (
+                      <a
+                        href={cs.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs hover:bg-accent"
+                        aria-label={`View ${cs.title} on GitHub`}
+                      >
+                        View repo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

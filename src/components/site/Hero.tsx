@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import gsap from "gsap";
 import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import heroCollage from "@/assets/hero-collage.webp";
 
 const specialties = ["AI Automation", "Full‑Stack", "IoT Agents"];
 
@@ -62,7 +63,7 @@ const Hero = () => {
               "max-w-2xl font-display text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl"
             )}
           >
-            AI automation, full‑stack apps, and IoT agents.
+            Flutter/Django apps, LSTM forecasting, and AI dashboards.
           </h1>
           <p
             data-hero-fade

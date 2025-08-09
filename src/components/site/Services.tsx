@@ -7,39 +7,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
-    title: "LLM & NLP Systems",
-    Icon: Cpu,
-    bullets: [
-      "RAG pipelines with vector search",
-      "Fine-tuning and evaluation",
-      "Observability & guardrails",
-    ],
-  },
-  {
-    title: "Automation & Agents",
-    Icon: Bot,
-    bullets: [
-      "Multi-tool agents and workflows",
-      "Browser/RPA + API orchestration",
-      "Eval harnesses & safety rails",
-    ],
-  },
-  {
-    title: "IoT & Robotics",
-    Icon: RadioTower,
-    bullets: [
-      "DJI Tello and edge vision demos",
-      "Realtime telemetry dashboards",
-      "Cloud-to-edge control",
-    ],
-  },
-  {
-    title: "Full‑Stack Delivery",
+    title: "Full‑Stack Development",
     Icon: Layers3,
     bullets: [
-      "React/Vite frontends",
-      "Node/Python inference APIs",
-      "CI/CD & cloud deploy",
+      "React/Vite frontends + Django/Flask backends",
+      "Flutter mobile apps (Elderly Care Companion)",
+      "CI/CD and cloud deploys",
+    ],
+  },
+  {
+    title: "AI & ML",
+    Icon: Cpu,
+    bullets: [
+      "LSTM + Attention stock forecasting (TensorFlow)",
+      "Text prediction dashboard with Hugging Face",
+      "Eval and monitoring basics",
+    ],
+  },
+  {
+    title: "IoT Solutions",
+    Icon: RadioTower,
+    bullets: [
+      "Real‑time telemetry dashboards",
+      "Edge integrations & device control",
+      "Cloud‑to‑device messaging",
+    ],
+  },
+  {
+    title: "Consulting",
+    Icon: Bot,
+    bullets: [
+      "Architecture reviews & roadmaps",
+      "MVP sprints and team enablement",
+      "Performance, accessibility, SEO",
     ],
   },
 ];
