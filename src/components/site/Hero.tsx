@@ -110,7 +110,7 @@ const Hero = () => {
           <div className="relative h-72 w-full max-w-md">
             <div className="glass-card absolute inset-0 p-4 shadow-sm">
               <img
-                src="/placeholder.svg"
+                src={(import.meta as any).env.BASE_URL + "placeholder.svg"}
                 alt="Studio workflow illustration"
                 loading="lazy"
                 className="mx-auto h-full w-auto"

@@ -22,14 +22,16 @@ const Index = () => {
       link.setAttribute("rel", "canonical");
       document.head.appendChild(link);
     }
-    link.setAttribute("href", "/");
+    const base = (import.meta as any).env.BASE_URL || "/";
+    const canonical = new URL(base, window.location.origin).toString();
+    link.setAttribute("href", canonical);
   }, []);
 
   const orgJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Eco Fusion',
-    url: '/',
+    url: (import.meta as any).env.BASE_URL || '/',
     sameAs: [],
     description: 'AI automation, full‑stack engineering, and IoT agents.',
   };
